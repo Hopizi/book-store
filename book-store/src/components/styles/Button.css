@@ -1,0 +1,13 @@
+.button-container {
+    width: fit-content;
+    padding: 8px 15px;
+    background-color: rgb(28, 28, 75);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pad-increase {
+    padding: 14px 20px;
+}
