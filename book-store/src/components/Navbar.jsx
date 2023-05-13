@@ -23,6 +23,7 @@ function Navbar() {
             </div>
             <div className={`nav-items-continer ${navItem}`}>
                 <ul>
+                    <Link to='/allbooks'><li>All Books</li></Link>
                     <Link to='/insertbook'><li>Insert Book</li></Link>
                     <Link to='/searchbook'><li>Search Book</li></Link>
                     <li><Button btnTitle="Login" style='borderBlack'/></li>

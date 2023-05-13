@@ -1,0 +1,14 @@
+.book-info-card-main label{ 
+    font-size: 14px;
+    color: gray;
+}
+
+.book-info-card-main div p {
+    margin-top: 3px;
+}
+
+.author-desgin {
+    border: 2px solid black;
+    width: fit-content;
+    padding: 5px;
+}

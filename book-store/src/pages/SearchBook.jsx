@@ -1,4 +1,4 @@
-import {Navbar, Button} from "../components"
+import {Navbar, Button, BookCard} from "../components"
 import "./styles/SearchBook.css"
 
 function SearchBook() {
@@ -26,6 +26,16 @@ function SearchBook() {
                         <Button btnTitle='Search'/>
                     </div>
                 </form>
+                <div className="search-book-search-results">
+                    <BookCard />
+                    <BookCard />
+                    <BookCard />
+                    <BookCard />
+                    <BookCard />
+                    <BookCard />
+                    <BookCard />
+                    <BookCard />
+                </div>
             </div>
         </div>
     </div>

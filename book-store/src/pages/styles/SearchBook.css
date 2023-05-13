@@ -4,7 +4,7 @@
 }
 
 .search-book-inner {
-    margin-top: 80px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
@@ -12,17 +12,19 @@
 .search-book-display {
     background-color: #f9f9f9;
     width: 93%;
-    display: flex;
-    justify-content: center;
     padding: 20px 0;
     border-radius: 10px;
 }
 
 .search-book-display form {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     min-width: 60%;
+}
+
+.search-book-display form div {
+    margin: 0 20px;
 }
 
 .search-book-display form div input {
@@ -47,4 +49,12 @@
     border-radius: 0.25em;
     cursor: pointer;
     font-size: 16px;
+}
+
+.search-book-search-results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    margin-top: 30px;
 }

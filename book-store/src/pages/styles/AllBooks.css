@@ -1,0 +1,19 @@
+.all-books-main {
+    margin-top: -20px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.all-books-main-inner {
+    margin-top: 80px;
+    padding: 0 50px;
+    width:89%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.all-book-alphabet-filter-card {
+    display: flex;
+    flex-wrap: wrap;
+}

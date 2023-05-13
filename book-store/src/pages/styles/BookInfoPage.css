@@ -1,0 +1,27 @@
+.book-info-page-main {
+    border: 1px solid red;
+    min-height: 100vh;
+    margin-top: -20px;
+}
+
+.book-info-inner-page-main {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.book-info-section {
+    width: 93%;
+    background-color: #f9f9f9;
+    padding: 5px 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.book-info-useful-btns {
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
