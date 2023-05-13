@@ -6,8 +6,23 @@
     font-size: 18px;
     color: #fff;
     cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.button-container:hover {
+    opacity: 0.9;
 }
 
 .pad-increase {
     padding: 14px 20px;
+}
+
+.margin-left {
+    margin-left: auto;
+}
+
+@Media screen and (max-width: 768px) {
+    .borderBlack {
+        border: 2px solid black;
+    }
 }

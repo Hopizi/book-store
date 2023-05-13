@@ -1,0 +1,50 @@
+.search-book-main {
+    border: 1px solid;
+    margin-top: -20px;
+}
+
+.search-book-inner {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-book-display {
+    background-color: #f9f9f9;
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.search-book-display form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 60%;
+}
+
+.search-book-display form div input {
+    width: 300px;
+    padding: 8px 5px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.search-book-display form div label {
+    margin-right: 10px;
+}
+
+.search-book-display form div input:focus {
+    outline: none;
+}
+
+.search-book-display form div select {
+    outline: 0;
+    width: 12em;
+    height: 2em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-size: 16px;
+}

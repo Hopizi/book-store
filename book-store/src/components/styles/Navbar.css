@@ -3,7 +3,12 @@
     justify-content: space-between;
     width: 100%;
     position: absolute;
-    color: #fff;
+    color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .navbar-logo {
@@ -27,4 +32,113 @@
     list-style: none;
     margin: 0 1rem;
     cursor: pointer;
+}
+
+.nav-btn-container {
+    position: absolute;
+    top: 38px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    display: none;
+}
+
+.menu-btn {
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn::before,
+.menu-btn::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn::after {
+    transform: translateY(10px);
+}
+
+.nav-btn-container.open .menu-btn {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.nav-btn-container.open .menu-btn::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.nav-btn-container.open .menu-btn::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+@Media screen and (max-width: 768px) {
+    .navbar-logo {
+        margin: 0 2rem;
+    }
+
+    .nav-btn-container {
+        position: fixed;
+    }
+
+    .navbar-main-container {
+        height: 100%;
+        background-color: rgb(28, 28, 75);
+        z-index: 1;
+        width: 0;
+        transition: width 0.2s ease-in-out;
+    }
+
+    .navCon {
+        width: 100%;
+    }
+
+    .nav-items-continer {
+        position: absolute;
+        top: 30%;
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-items-continer ul {
+        margin-left: 0;
+    }
+
+    .navItemOpen {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navItemClose {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-items-continer ul {
+        flex-direction: column;
+    }
+
+    .nav-items-continer ul li {
+        margin: 20px 0;
+        font-size: 23px;
+        text-align: center;
+    }
 }

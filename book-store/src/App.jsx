@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Landing from './pages/Landing'
+import {Landing, InsertBook, SearchBook} from "./pages"
 import {Routes, Route} from "react-router-dom";
 
 function App() {
@@ -8,6 +8,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Landing />}/>
+        <Route path='/insertbook' element={<InsertBook />}/>
+        <Route path='/searchbook' element={<SearchBook />}/>
       </Routes>
     </>
   )
