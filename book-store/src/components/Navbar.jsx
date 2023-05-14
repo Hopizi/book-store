@@ -4,7 +4,7 @@ import Button from './Button'
 import "./styles/Navbar.css"
 import {Link} from "react-router-dom"
 
-function Navbar() {
+function Navbar({style}) {
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -17,23 +17,25 @@ function Navbar() {
     }
 
   return (
-    <div className={`navbar-main-container ${navCon}`}>
+    <>
+    <div className={`navbar-main-container ${navCon} ${style}`}>
             <div className='navbar-logo'>
-                <h1>Booker</h1>
+                <Link to='/'><h1>Booker</h1></Link>
             </div>
             <div className={`nav-items-continer ${navItem}`}>
                 <ul>
                     <Link to='/allbooks'><li>All Books</li></Link>
-                    <Link to='/insertbook'><li>Insert Book</li></Link>
-                    <Link to='/searchbook'><li>Search Book</li></Link>
-                    <li><Button btnTitle="Login" style='borderBlack'/></li>
+                    <Link to='/insertbook'><li>Add Book</li></Link>
+                    <Link to='/searchbooks'><li>Search Book</li></Link>
+                    {/* <li><Button btnTitle="Login" style='borderBlack'/></li> */}
                 </ul>
             </div>
-            <div className={`nav-btn-container ${menuClass}`} 
+    </div>
+    <div className={`nav-btn-container ${menuClass}`} 
                 onClick={handleClick}>
                 <div className='menu-btn'></div>
-            </div>
     </div>
+    </>
   )
 }
 

@@ -1,7 +1,36 @@
 import {Navbar, Button, BookCard} from "../components"
 import "./styles/SearchBook.css"
+import { useEffect, useState } from "react"
+import axios from 'axios'
+import { debounce } from 'lodash';
 
 function SearchBook() {
+
+    const [queryBooks, setQueryBooks] = useState([])
+    const [searchQuery, setSearchQuery] = useState('')
+
+
+     useEffect(() => {
+        const debouncedSearch = debounce(() => {
+        axios.get(`https://assessment-382621.appspot.com/bookapi?query=${searchQuery}`).then((response) => {
+            setQueryBooks(response.data);
+            })
+            .catch((error) => console.log(error));
+        }, 500);
+
+        if (searchQuery) {
+        debouncedSearch();
+        }
+
+        return debouncedSearch.cancel;
+    }, [searchQuery]);
+
+    function handleChange(event) {
+        setSearchQuery(event.target.value)
+    }
+
+
+
   return (
     <div className="search-book-main">
         <Navbar />
@@ -20,21 +49,24 @@ function SearchBook() {
                         </select>
                     </div>
                     <div className="search-book-search-box">
-                        <input type="text" placeholder="Enter Keywords"/>
+                        <input type="text" value={searchQuery} onChange={handleChange} placeholder="Enter Keywords"/>
                     </div>
                     <div className="search-book-btn">
-                        <Button btnTitle='Search'/>
+                        <Button btnTitle='Search' />
                     </div>
                 </form>
                 <div className="search-book-search-results">
-                    <BookCard />
-                    <BookCard />
-                    <BookCard />
-                    <BookCard />
-                    <BookCard />
-                    <BookCard />
-                    <BookCard />
-                    <BookCard />
+                    {
+                        queryBooks.map((book, index) => {
+                            return <BookCard 
+                            bookTitle={book && book.title}
+                            bookAuthor={book && book.author}
+                            bookDate={book && book.date}
+                            id={book && book.id}
+                            key={index}
+                            />
+                        })
+                    }
                 </div>
             </div>
         </div>

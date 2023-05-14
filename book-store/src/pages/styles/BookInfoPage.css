@@ -1,7 +1,7 @@
 .book-info-page-main {
-    border: 1px solid red;
     min-height: 100vh;
     margin-top: -20px;
+    border-top: 1px solid;
 }
 
 .book-info-inner-page-main {
@@ -24,4 +24,9 @@
     position: absolute;
     top: 20px;
     right: 25px;
+}
+
+.b-k-icons {
+    width: 20px;
+    height: 20px;
 }

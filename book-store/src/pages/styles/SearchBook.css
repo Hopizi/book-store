@@ -1,10 +1,10 @@
 .search-book-main {
-    border: 1px solid;
     margin-top: -20px;
+    border-top: 1px solid;
 }
 
 .search-book-inner {
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
@@ -57,4 +57,22 @@
     flex-wrap: wrap;
     padding: 10px 20px;
     margin-top: 30px;
+}
+
+@Media screen and (max-width: 768px) {
+    .search-book-display form {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .search-book-display form div {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-book-display form div:first-child {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

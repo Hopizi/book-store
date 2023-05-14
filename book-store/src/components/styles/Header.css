@@ -22,6 +22,20 @@
 }
 
 .header-textbtn-container {
+    position: absolute;
+    top: 55%;
+    left: 0;
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+@Media screen and (max-width: 768px) {
+    .header-text-container {
+        left: 5%;
+    }
+
+    .header-textbtn-container {
+        top: 75%;
+    }
 }

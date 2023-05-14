@@ -1,14 +1,17 @@
 .all-books-main {
     margin-top: -20px;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
+    border-top: 1px solid;
 }
 
 .all-books-main-inner {
     margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.all-books-display {
+    width: 89%;
     padding: 0 50px;
-    width:89%;
     background-color: #f9f9f9;
     border-radius: 10px;
 }

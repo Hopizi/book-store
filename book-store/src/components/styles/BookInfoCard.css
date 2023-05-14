@@ -3,6 +3,10 @@
     color: gray;
 }
 
+.book-info-card-main h1 {
+    width: 75%;
+}
+
 .book-info-card-main div p {
     margin-top: 3px;
 }
@@ -11,4 +15,10 @@
     border: 2px solid black;
     width: fit-content;
     padding: 5px;
+}
+
+@Media screen and (max-width: 768px) {
+    .book-info-card-main h1 {
+        width: 50%;
+    }
 }

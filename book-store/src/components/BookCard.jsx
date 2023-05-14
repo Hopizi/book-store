@@ -1,12 +1,17 @@
 import "./styles/BookCard.css"
+import {Link} from "react-router-dom"
 
-function BookCard() {
+function BookCard({bookTitle, bookAuthor, bookDate, id}) {
   return (
-    <div className="book-card-main">
-        <h3>Harry Potter and the Order of the Phoenix</h3>
-        <p>J.K. Rowling</p>
-        <p>09/28/04</p>
-    </div>
+      <div className="book-card-main">
+        <Link to={`/book/${id}`}>
+          <div className="book-card-main-inner">
+          <h3>{bookTitle}</h3>
+          <p>{bookAuthor}</p>
+          <p>{bookDate}</p>
+          </div>
+          </Link>
+      </div>
   )
 }
 

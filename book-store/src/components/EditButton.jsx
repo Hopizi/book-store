@@ -1,7 +1,8 @@
 import React from 'react'
 import "./styles/Button.css"
+import {Link} from "react-router-dom"
 
-function Button({btnTitle, style, component, onClick}) {
+function EditButton({btnTitle, style, component, onClick, path}) {
   return (
     <div className={`button-container ${style}`} onClick={onClick}>
         {component}
@@ -10,4 +11,4 @@ function Button({btnTitle, style, component, onClick}) {
   )
 }
 
-export default Button
+export default EditButton

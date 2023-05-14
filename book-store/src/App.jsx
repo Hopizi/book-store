@@ -9,10 +9,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing />}/>
         <Route path='/insertbook' element={<InsertBook />}/>
-        <Route path='/searchbook' element={<SearchBook />}/>
-        <Route path='/bookinfo' element={<BookInfoPage />}/>
+        <Route path='/searchbooks' element={<SearchBook />}/>
+        <Route path='/book/:id' element={<BookInfoPage />}/>
         <Route path='/allbooks' element={<AllBooks />}/>
-        <Route path='/editbook' element={<EditBook />}/>
+        <Route path='/editbook/:id' element={<EditBook />}/>
       </Routes>
     </>
   )
