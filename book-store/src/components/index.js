@@ -5,6 +5,7 @@ import BookCard from "./BookCard";
 import BookInfoCard from "./BookInfoCard";
 import EditButton from "./EditButton";
 import Loading from "./Loading"
+import SucessMessage from "./SucessMessage";
 
 export {
     Button,
@@ -13,5 +14,6 @@ export {
     BookCard,
     BookInfoCard,
     EditButton,
-    Loading
+    Loading,
+    SucessMessage
 }

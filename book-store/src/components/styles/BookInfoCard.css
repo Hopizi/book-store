@@ -1,3 +1,7 @@
+.book-info-card-main {
+    padding: 30px 0;
+}
+
 .book-info-card-main label{ 
     font-size: 14px;
     color: gray;

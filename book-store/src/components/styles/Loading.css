@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     background-color: #f9f9f9;
+    padding: 10px 0;
 }
 
 .lds-dual-ring {
@@ -19,12 +20,12 @@
 .lds-dual-ring:after {
     content: " ";
     display: block;
-    width: 64px;
-    height: 64px;
+    width: 44px;
+    height: 44px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #fff transparent #fff transparent;
+    border: 6px solid rgb(28, 28, 75);
+    border-color: rgb(28, 28, 75) transparent rgb(28, 28, 75) transparent;
     animation: lds-dual-ring 1.2s linear infinite;
 }
 

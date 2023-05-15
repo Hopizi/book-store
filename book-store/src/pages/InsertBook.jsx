@@ -1,10 +1,10 @@
 import React from 'react'
-import {Navbar, Button} from "../components"
+import {Navbar, Button, SucessMessage} from "../components"
 import "./styles/InsertBook.css"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function InsertBook() {
+function InsertBook({popUp, handlePopUp}) {
 
     const [id, setId] = useState('')
     const [books, setBooks] = useState([])
@@ -63,7 +63,8 @@ function InsertBook() {
             synopsis: formData.synopsis,
             id: id
         }
-        axios.post("https://assessment-382621.appspot.com/bookapi", book).then(response => {console.log(response)}).catch(err => console.log(err))
+        axios.post("https://assessment-382621.appspot.com/bookapi", book).then(response => {console.log(response)}).catch(err => console.log(err));
+        handlePopUp()
     }
 
   return (
@@ -72,6 +73,7 @@ function InsertBook() {
             <Navbar />
         </div>
         <div className='insert-book-form-main'>
+            {popUp && <SucessMessage message="New Book Entry Made Succesfully"/>}
             <div className='insert-book-form-inner'>
                 <h1>Add Book</h1>
                 <form className='insert-book-form'>
@@ -85,7 +87,7 @@ function InsertBook() {
                     </div>
                     <div>
                         <label>Date</label>
-                        <input type='date' value={formData.date} name='date' onChange={handleChange}/>
+                        <input type='text' value={formData.date} name='date' placeholder='Enter Release Date' onChange={handleChange}/>
                     </div>
                     <div>
                         <label>Genres</label>

@@ -1,4 +1,4 @@
-import {Navbar, Button, BookCard} from "../components"
+import {Navbar, Button, BookCard, Loading} from "../components"
 import "./styles/SearchBook.css"
 import { useEffect, useState } from "react"
 import axios from 'axios'
@@ -8,6 +8,7 @@ function SearchBook() {
 
     const [queryBooks, setQueryBooks] = useState([])
     const [searchQuery, setSearchQuery] = useState('')
+    const [loading, setLoading] = useState(false)
 
 
      useEffect(() => {

@@ -11,6 +11,7 @@
 .insert-book-form-main {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .insert-book-form-inner {
@@ -44,6 +45,7 @@
 .insert-book-btn-container {
     width: 96%;
     margin-top: 5px;
+    margin-bottom: 20px
 }
 
 @Media screen and (max-width: 768px) {
