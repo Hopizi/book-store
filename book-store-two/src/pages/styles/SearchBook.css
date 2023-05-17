@@ -1,0 +1,97 @@
+
+.search-book-inner {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-book-display {
+    background-color: #1d1d1d;
+    color: #fff;
+    width: 78%;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.search-book-search-results {
+    padding: 30px;
+    position: relative;
+}
+
+.search-book-display form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60%;
+}
+
+.search-book-display form div {
+    margin: 0 20px;
+}
+
+.search-book-display form div input {
+    width: 300px;
+    padding: 8px 5px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.search-book-display form div label {
+    margin-right: 10px;
+}
+
+.search-book-display form div input:focus {
+    outline: none;
+}
+
+.search-book-display form div select {
+    outline: 0;
+    width: 12em;
+    height: 2em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-book-search-results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+@Media screen and (max-width: 768px) {
+    .search-book-display form {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .search-book-display {
+        margin-left: 50px;
+    }
+
+    .search-book-display form div {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-book-display form div:first-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@Media screen and (max-width: 400px) {
+    .search-book-display form div input {
+        width: 90%;
+    }
+
+    .search-book-display {
+        margin-left: 30px;
+    }
+}

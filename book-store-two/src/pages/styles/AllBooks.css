@@ -1,0 +1,79 @@
+.all-books-main-inner {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.all-books-display {
+    color: #fff;
+    position: relative;
+    width: 78%;
+    padding: 0 50px;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+
+.all-book-alphabet-filter-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.pagination-main-contaiiner {
+    display: flex;
+    list-style: none;
+    color: #fff;
+}
+
+.pagination-main-contaiiner a {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination-main-contaiiner a:hover {
+    background-color: rgb(37, 150, 190);
+}
+
+.active-page a {
+    background-color: rgb(92, 202, 243);
+}
+
+@Media screen and (max-width: 768px) {
+    .all-books-display {
+        margin-left: 50px;
+        width: 65%;
+        padding-left: 10px;
+    }
+
+    .pagination-main-contaiiner a {
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    .all-book-alphabet-filter-card {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    
+}
+
+@Media screen and (max-width: 400px) {
+    .all-books-display {
+        margin-left: 30px;
+    }
+
+    .pagination-main-contaiiner a {
+        font-size: 11px;
+        margin: 0px;
+        padding: 8px;
+    }
+}

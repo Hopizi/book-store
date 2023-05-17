@@ -1,0 +1,70 @@
+.doc-side-bar-main {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 8%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 150, 190);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+}
+
+
+.doc-side-icons {
+    width: 35px;
+    height: 35px;
+    fill: #fff;
+}
+
+.doc-side-bar-inner ul li {
+    list-style: none;
+    margin: 40px 0;
+    margin-left: -40px;
+}
+
+.margin-rmv {
+    margin-left: -73px;
+}
+
+.doc-side-bar-main.fixed {
+    position: fixed;
+}
+
+.side-logo-container {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 80px;
+}
+
+.side-logo-container img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+@Media screen and (max-width: 768px) {
+    .doc-side-icons {
+        width: 25px;
+        height: 25px;
+    }
+
+    .side-logo-container {
+        width: 45px;
+        height: 45px;
+    }
+
+    .doc-side-bar-inner ul li {
+        margin-left: -32px;
+    }
+
+    .margin-rmv {
+        margin-left: -45px;
+    }
+}

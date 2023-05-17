@@ -1,0 +1,36 @@
+.sucess-message-container {
+    width: fit-content;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    padding: 0 20px;
+    background-color: rgb(37, 150, 190);
+    color: #fff;
+    display:  flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: opacity 0.75s ease, visibility 0.75s ease;
+    overflow: hidden;
+}
+
+.rightrd {
+    right: 60px;
+}
+
+.move-down {
+    top: 80px;
+    right: 20px;
+}
+
+.fade {
+    opacity: 0;
+}
+
+@Media screen and (max-width: 768px) {
+    .sucess-message-container {
+        font-size: 12px;
+        right: 12px;
+        padding: 0 15px;
+    }
+}
