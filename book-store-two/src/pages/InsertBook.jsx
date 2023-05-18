@@ -3,8 +3,12 @@ import {Navbar, Button, SucessMessage, SideBar} from "../components"
 import "./styles/InsertBook.css"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+import {Helmet} from "react-helmet";
 
 function InsertBook({popUp, handlePopUp}) {
+
+    const navigate = useNavigate()
 
     const [id, setId] = useState('')
     const [books, setBooks] = useState([])
@@ -53,7 +57,6 @@ function InsertBook({popUp, handlePopUp}) {
     }, [])
 
     function postData() {
-        console.log("Posted To Server")
         const book = {
             title: formData.title,
             author: formData.author,
@@ -65,10 +68,14 @@ function InsertBook({popUp, handlePopUp}) {
         }
         axios.post("https://assessment-386911.appspot.com/bookapi", book).then(response => {console.log(response)}).catch(err => console.log(err));
         handlePopUp()
+        setTimeout(() => {
+            navigate(`/allbooks`)
+        }, 3600);
     }
 
   return (
     <div className='insert-book-main'>
+        <Helmet><title>Add New Book</title></Helmet>
         <SideBar />
         <div className='insert-book-form-main'>
             {popUp && <SucessMessage message="New Book Entry Made Succesfully"/>}

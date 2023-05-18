@@ -1,13 +1,14 @@
 import React from 'react'
 import {Navbar, Button, SideBar, SucessMessage, Loading} from "../components"
 import "./styles/EditBook.css"
-import {Link, useParams} from "react-router-dom"
+import {Link, useParams, useNavigate} from "react-router-dom"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function EditBook({popUp, handlePopUp}) {
 
     const {id} = useParams()
+    const navigate = useNavigate()
 
     const [loading, setLoading] = useState(false)
     const [editValue, setEditValue] = useState({
@@ -46,6 +47,9 @@ function EditBook({popUp, handlePopUp}) {
     function updateBook() {
         axios.put(`https://assessment-386911.appspot.com/bookapi?id=${id}`, editValue).then(response => {console.log(response)}).catch(err => console.log(err));
         handlePopUp()
+        setTimeout(() => {
+            navigate(-1)
+        }, 3600)
     }
 
   return (

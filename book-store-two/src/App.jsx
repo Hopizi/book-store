@@ -16,7 +16,7 @@ function App() {
         setPopUp(true);
         setTimeout(() => {
             setPopUp(false)
-        },5500)
+        },3500)
     }
 
   return (

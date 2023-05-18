@@ -5,8 +5,9 @@ import {Navbar, Button, EditButton, Loading, SucessMessage, DeleteCard} from "..
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import {Edit, Delete} from "../assets"
+import {Helmet} from "react-helmet";
 
-function BookInfoCard() {
+function BookInfoCard({popUp, handlePopUp}) {
 
     const {id} = useParams();
     const navigate = useNavigate()
@@ -31,9 +32,10 @@ function BookInfoCard() {
 
   return (
     <div className='book-info-card-main'>
+        <Helmet><title>{bookData && bookData.title}</title></Helmet>
         { loading ?
         <div className='book-info-main-inner'>
-            {/* <SucessMessage message='Book Deleted Sucessfully' style='move-down'/> */}
+            {popUp && <SucessMessage message='Book Deleted Sucessfully' style='move-down'/>}
             <h1>{bookData && bookData.title}</h1>
             <div>
                 <label>Author</label>
@@ -61,7 +63,7 @@ function BookInfoCard() {
             </div>
             { deleteClick &&
             <div className="delete-confirmation animate__animated animate__fadeInDown">
-                <DeleteCard setDeleteClick={setDeleteClick} deleteBook={deleteBook}/>
+                <DeleteCard setDeleteClick={setDeleteClick} deleteBook={deleteBook} />
             </div>
             }
         </div>

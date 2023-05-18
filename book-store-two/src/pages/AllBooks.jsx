@@ -7,6 +7,7 @@ import {Link} from "react-router-dom"
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import ReactPaginate from 'react-paginate';
+import {Helmet} from "react-helmet";
 
 function AllBooks() {
 
@@ -45,6 +46,7 @@ function AllBooks() {
 
   return (
     <div className='all-books-main'>
+        <Helmet><title>All Books</title></Helmet>
         <SideBar />
         <div className='all-books-main-inner'>
           <div className='all-books-display'>

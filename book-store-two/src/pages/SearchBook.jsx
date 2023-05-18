@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 import { debounce } from 'lodash';
 import React from "react";
+import {Helmet} from "react-helmet";
 
 function SearchBook() {
 
@@ -30,17 +31,16 @@ function SearchBook() {
 
     function handleChange(event) {
         setSearchQuery(event.target.value)
-        if (event.target.value) {
+        if (event.target.value && queryBooks.length != 0) {
             setLoading(false)
         }else {
             setLoading(true)
         }
     }
 
-
-
   return (
     <div className="search-book-main">
+        <Helmet><title>Search For Books</title></Helmet>
         <SideBar />
         <div className="search-book-inner">
             <div className="search-book-display">
@@ -64,6 +64,7 @@ function SearchBook() {
                     </div>
                 </form>
                 <div className="search-book-search-results">
+                    {queryBooks.length === 0 ? <p>No Books Found</p> : ""}
                     { loading ?
                         queryBooks.map((book, index) => {
                             return <BookCard 

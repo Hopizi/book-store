@@ -86,9 +86,15 @@
 
 }
 
+@Media screen and (max-width: 768px) {
+    .search-book-display form div input {
+        width: 85%;
+    }
+}
+
 @Media screen and (max-width: 400px) {
     .search-book-display form div input {
-        width: 90%;
+        width: 85%;
     }
 
     .search-book-display {
